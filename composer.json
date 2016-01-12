@@ -1,0 +1,17 @@
+{
+    "name": "diglin/diglin_mssql",
+    "description": "Mssql Adapter for Magento (limited features)",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Sylvain Raye",
+            "email": "support@diglin.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"ext-mssql":"*",
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}

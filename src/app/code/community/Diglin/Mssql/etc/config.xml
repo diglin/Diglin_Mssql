@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Diglin GmbH - Switzerland
+ *
+ * @author      Sylvain Rayé <support at diglin.com>
+ * @category    Diglin
+ * @package     Diglin_Mssql
+ * @copyright   Copyright (c) 2011-2016 Diglin (http://www.diglin.com)
+ */
+ -->
+<config>
+    <modules>
+        <Diglin_Mssql>
+            <version>0.1.0</version>
+        </Diglin_Mssql>
+    </modules>
+
+    <global>
+        <models>
+            <Diglin_Mssql>
+                <class>Diglin_Mssql_Model</class>
+                <resourceModel>Diglin_Mssql_resource</resourceModel>
+            </Diglin_Mssql>
+            <Diglin_Mssql_resource>
+                <class>Diglin_Mssql_Model_Resource</class>
+            </Diglin_Mssql_resource>
+        </models>
+        <helpers>
+            <Diglin_Mssql>
+                <class>Diglin_Mssql_Helper</class>
+            </Diglin_Mssql>
+        </helpers>
+
+        <resource>
+            <connection>
+                <types>
+                    <mssql>
+                        <adapter>Diglin_Mssql_Model_Db_Adapter_Mssql</adapter>
+                        <class>Diglin_Mssql_Model_Resource_Type_Db_Mssql</class>
+                    </mssql>
+                </types>
+            </connection>
+        </resource>
+    </global>
+</config>

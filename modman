@@ -1,0 +1,2 @@
+src/app/etc/modules/Diglin_Mssql.xml app/etc/modules/Diglin_Mssql.xml
+src/app/code/community/Diglin/Mssql/* app/code/community/Diglin/Mssql/

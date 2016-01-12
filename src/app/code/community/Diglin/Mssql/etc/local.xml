@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Diglin GmbH - Switzerland
+ *
+ * @author      Sylvain Rayé <support at diglin.com>
+ * @category    Diglin
+ * @package     Diglin_Mssql
+ * @copyright   Copyright (c) 2011-2016 Diglin (http://www.diglin.com)
+ */
+-->
+<config>
+    <global>
+        <resources>
+            <default_mssql>
+                <connection>
+                    <host>{{db_host_erp}}</host>
+                    <username>{{db_user_erp}}</username>
+                    <password>{{db_pass_erp}}</password>
+                    <dbname>{{db_name_erp}}</dbname>
+                    <model>{{db_model_erp}}</model>
+                    <initStatements>{{db_init_statements_erp}}</initStatements>
+                    <type>{{db_type_erp}}</type>
+                    <active>1</active>
+                </connection>
+            </default_mssql>
+        </resources>
+    </global>
+</config>
