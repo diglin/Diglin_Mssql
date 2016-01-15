@@ -13,6 +13,9 @@
  */
 class Diglin_Mssql_Model_Db_Adapter_Mssql extends Zend_Db_Adapter_Sqlsrv implements Varien_Db_Adapter_Interface
 {
+    /**
+     * @var string
+     */
     protected $_defaultStmtClass = 'Diglin_Mssql_Model_Db_Statement_Mssql';
 
     /**

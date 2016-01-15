@@ -313,21 +313,22 @@ class Diglin_Mssql_Model_Db_Statement_Mssql extends Zend_Db_Statement
             return false;
         }
 
-        if (!mssql_next_result($this->_result)) {
-            if (null !== $error = mssql_get_last_message()) {
-                throw new Zend_Db_Statement_Exception($error);
-            }
+        // @todo only in case of multiple results or stored procdure
+//        if (!mssql_next_result($this->_result)) {
+//            if (null !== $error = mssql_get_last_message()) {
+//                throw new Zend_Db_Statement_Exception($error);
+//            }
+//
+//            // If no error, there is simply no record
+//            return false;
+//        }
 
-            // If no error, there is simply no record
-            return false;
-        }
-
-        $data = mssql_fetch_field($this->_stmt, $col); //0-based
+        $data = mssql_fetch_array($this->_result, MSSQL_NUM);
         if ($data === false) {
             throw new Zend_Db_Statement_Exception(mssql_get_last_message());
         }
 
-        return $data;
+        return $data[$col];
     }
 
     /**
