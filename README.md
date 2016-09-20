@@ -5,7 +5,7 @@ Be aware that it is not attended to replace MySQL for Magento Database. It is no
 
 ## Requirements
 
-- php-mssql or pdo_dblib
+- php-mssql or pdo_dblib (with PHP 7)
 
 ## Installation
 
