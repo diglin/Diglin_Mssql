@@ -5,7 +5,7 @@ Be aware that it is not attended to replace MySQL for Magento Database. It is no
 
 ## Requirements
 
-- php-mssql
+- php-mssql or pdo_dblib
 
 ## Installation
 
@@ -50,18 +50,17 @@ Add into your `app/etc/local.xml` the following information and replace the plac
 <config>
     <global>
         <resources>
-            <default_mssql>
+            <default_sqlsrv>
                 <connection>
-                    <host>{{db_host_mssql}}</host>
-                    <username>{{db_user_mssql}}</username>
-                    <password>{{db_pass_mssql}}</password>
-                    <dbname>{{db_name_mssql}}</dbname>
-                    <model>{{db_model_mssql}}</model>
-                    <initStatements>{{db_init_statements_mssql}}</initStatements>
-                    <type>{{db_type_mssql}}</type>
-                    <active>1</active>
+                    <host>{{db_host_sqlsrv}}</host>
+                    <username>{{db_user_sqlsrv}}</username>
+                    <password>{{db_pass_sqlsrv}}</password>
+                    <dbname>{{db_name_sqlsrv}}</dbname>
+                    <initStatements>{{db_init_statements_sqlsrv}}</initStatements>
+                    <type>{{db_type_sqlsrv}}</type><!-- mssql or pdo_dblib -->
+                    <active>{{db_active_sqlsrv}}</active><!-- 0 or 1 -->
                 </connection>
-            </default_mssql>
+            </default_sqlsrv>
         </resources>
     </global>
 </config>
@@ -75,7 +74,7 @@ In any location of your Magento Module:
 $resource = Mage::getSingleton('core/resource');
 
 /* @var $connection Diglin_Mssql_Model_Db_Adapter_Mssql */
-$connection = $resource->getConnection('default_mssql');
+$connection = $resource->getConnection('default_sqlsrv');
 
 var_dump($connection->fetchAll('SELECT @@VERSION'));
 //var_dump($connection->fetchAll('exec sp_columns mytable'));
