@@ -12,18 +12,17 @@
 <config>
     <global>
         <resources>
-            <default_mssql>
+            <default_sqlsrv>
                 <connection>
-                    <host>{{db_host_erp}}</host>
-                    <username>{{db_user_erp}}</username>
-                    <password>{{db_pass_erp}}</password>
-                    <dbname>{{db_name_erp}}</dbname>
-                    <model>{{db_model_erp}}</model>
-                    <initStatements>{{db_init_statements_erp}}</initStatements>
-                    <type>{{db_type_erp}}</type>
-                    <active>1</active>
+                    <host>{{db_host_sqlsrv}}</host>
+                    <username>{{db_user_sqlsrv}}</username>
+                    <password>{{db_pass_sqlsrv}}</password>
+                    <dbname>{{db_name_sqlsrv}}</dbname>
+                    <initStatements>{{db_init_statements_sqlsrv}}</initStatements>
+                    <type>{{db_type_sqlsrv}}</type><!-- mssql or pdo_dblib -->
+                    <active>{{db_active_sqlsrv}}</active><!-- 0 or 1 -->
                 </connection>
-            </default_mssql>
+            </default_sqlsrv>
         </resources>
     </global>
 </config>

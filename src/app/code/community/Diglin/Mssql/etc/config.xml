@@ -18,18 +18,19 @@
 
     <global>
         <models>
-            <Diglin_Mssql>
+            <diglin_mssql>
                 <class>Diglin_Mssql_Model</class>
                 <resourceModel>Diglin_Mssql_resource</resourceModel>
-            </Diglin_Mssql>
-            <Diglin_Mssql_resource>
+            </diglin_mssql>
+            <diglin_mssql_resource>
                 <class>Diglin_Mssql_Model_Resource</class>
-            </Diglin_Mssql_resource>
+            </diglin_mssql_resource>
         </models>
+
         <helpers>
-            <Diglin_Mssql>
+            <diglin_mssql>
                 <class>Diglin_Mssql_Helper</class>
-            </Diglin_Mssql>
+            </diglin_mssql>
         </helpers>
 
         <resource>
@@ -39,6 +40,10 @@
                         <adapter>Diglin_Mssql_Model_Db_Adapter_Mssql</adapter>
                         <class>Diglin_Mssql_Model_Resource_Type_Db_Mssql</class>
                     </mssql>
+                    <pdo_dblib>
+                        <adapter>Diglin_Mssql_Model_Db_Adapter_Pdo</adapter>
+                        <class>Diglin_Mssql_Model_Resource_Type_Db_Pdo</class>
+                    </pdo_dblib>
                 </types>
             </connection>
         </resource>
